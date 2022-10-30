@@ -1,16 +1,6 @@
-# chrome-extension-ts-starter
+# smart-room-chrome
 
-It is a boilerplate for a Chrome Extension built with TypeScript and Parcel.
-
-## This starter consists of the following parts
-
-* Background script (vanilla TS)
-* Content script (vanilla TS)
-* Options page (Vue.js, Sass)
-* Popup page (Vue.js, Sass)
-* DevTools panel page (React.js, Styled Components)
-
-_And, of course, the `./manifest.json` file describing its configuration._
+Chrome Extension to manage my room from my phone .
 
 ## Environment
 
