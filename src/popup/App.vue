@@ -1,16 +1,40 @@
 <template>
   <div class="container">
     <h1>{{ message }}</h1>
+    <button @click="join">Open youtube</button>
   </div>
 </template>
 
 <script lang="ts">
+import io from "socket.io-client";
+
 export default {
   name: 'App',
   data() {
     return {
-      message: 'Hey, it is the Popup page running on Vue.js!',
+      joined: false,
+      message: 'Hello World',
+      socketInstance : io()
     };
+  },
+  methods: {
+    join(){
+      this.joined = true;
+
+      this.socketInstance = io("http://localhost:3000");
+      this.socketInstance.on(
+        "info", (data: any) => {
+          console.log(data);
+        }
+      )
+
+    },
+    openYt() {
+      window.open('https://www.youtube.com');
+    },
+    doWhatYoureTold() {
+
+    },
   },
 };
 </script>
